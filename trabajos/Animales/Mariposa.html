@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Información sobre las mariposas</title>
+  <style>
+    body {
+      background-color: #bdff76;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+    
+    .marquesina {
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 10s linear infinite;
+    }
+    
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mariposas</h1>
+  
+  <p>
+    Las mariposas son insectos del orden Lepidoptera, conocidos por sus coloridas alas y su proceso de transformación llamado metamorfosis.
+  </p>
+  
+  <div class="marquesina">
+    <p>
+      Las mariposas tienen cuerpos delgados y antenas en forma de hilo.
+    </p>
+  </div>
+  
+  <p>
+    Las alas de las mariposas están cubiertas de escamas microscópicas que les dan su apariencia distintiva y variada.
+  </p>
+  
+  <div class="marquesina">
+    <p>
+      Las mariposas desempeñan un papel crucial en la polinización de las plantas.
+    </p>
+  </div>
+  
+  <p>
+    El ciclo de vida de las mariposas consta de cuatro etapas: huevo, larva, crisálida y adulto.
+  </p>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var marquesinas = document.querySelectorAll('.marquesina');
+      marquesinas.forEach(function(marquesina) {
+        marquesina.style.width = marquesina.scrollWidth + 'px';
+      });
+    });
+  </script>
+</body>
+</html>
